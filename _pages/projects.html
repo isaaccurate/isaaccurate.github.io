@@ -1,0 +1,5 @@
+---
+title: Projects
+permalink: /projects/
+---
+<div class="project-grid">{% assign projects = site.projects | sort: 'order' %}{% for project in projects %}{% include project-card.html project=project heading="h2" %}{% endfor %}</div>

@@ -1,0 +1,73 @@
+title: Your Name
+first_name: Your
+last_name: Name
+description: Software engineering, ML systems, and natural language processing. Projects and technical notes.
+url: "" # Set to https://YOUR_USERNAME.github.io before deploying
+baseurl: "" # Empty for USERNAME.github.io; /REPOSITORY for a project site
+lang: en
+timezone: America/Los_Angeles
+theme: al_folio_core
+al_folio:
+  api_version: 1
+  style_engine: tailwind
+  tailwind:
+    version: 4.1.18
+    preflight: false
+    css_entry: assets/tailwind/app.css
+  distill:
+    engine: distillpub-template
+    source: al-org-dev/distill-template#al-folio
+    allow_remote_loader: false
+  features:
+    cv:
+      enabled: false
+    distill:
+      enabled: false
+plugins:
+  - al_folio_core
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+permalink: /blog/:year/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+include: ["_pages"]
+collections:
+  projects:
+    output: false # Card content only; titles link directly to repository URLs.
+  knowledge:
+    output: true
+    permalink: /knowledge/:name/
+defaults:
+  - scope: {path: ""}
+    values: {layout: page, image: /assets/img/social.svg}
+  - scope: {path: "", type: projects}
+    values: {layout: null}
+  - scope: {path: "", type: knowledge}
+    values: {layout: note}
+  - scope: {path: "", type: posts}
+    values: {layout: note}
+feed:
+  collections:
+    knowledge:
+      path: /knowledge/feed.xml
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - scripts
+  - tests
+  - docs
+  - templates
+  - requirements.txt
+  - obsidian-sync.yml
+  - .venv
+  - .bundle
+  - .obsidian-sync-manifest.json
+  - vault
+  - node_modules
+strict_front_matter: true

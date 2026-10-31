@@ -1,0 +1,14 @@
+<footer class="site-footer shell">
+  <div class="social-links" aria-label="Social profiles and email">
+    {% for platform in site.data.socials %}
+      {% assign value = site.data.profile[platform.key] %}
+      {% if value and value != '' %}
+        {% if platform.key == 'email' %}{% assign href = 'mailto:' | append: value %}{% else %}{% assign href = value %}{% endif %}
+        <a href="{{ href | escape }}" aria-label="{{ platform.label }}" title="{{ platform.label }}">{% include social-icon.html platform=platform.key %}</a>
+      {% else %}
+        <span class="social-unavailable" role="img" aria-label="{{ platform.label }} — not yet configured" title="{{ platform.label }} — not yet configured">{% include social-icon.html platform=platform.key %}</span>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <p class="footer-note">Made with 🧋 in Seattle, WA</p>
+</footer>

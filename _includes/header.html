@@ -1,0 +1,4 @@
+<header class="site-header shell">
+<a class="brand" href="{{ '/' | relative_url }}">{{ site.data.profile.name | escape }}</a>
+<nav aria-label="Main navigation">{% for item in site.data.navigation %}<a href="{{ item.url | relative_url }}" {% if page.url == item.url or item.url != '/' and page.url contains item.url %}aria-current="page"{% elsif item.url == '/knowledge/' and page.layout == 'note' %}aria-current="page"{% endif %}>{{ item.title }}</a>{% endfor %}</nav>
+</header>

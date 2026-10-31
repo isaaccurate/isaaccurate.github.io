@@ -1,0 +1,6 @@
+- key: linkedin
+  label: LinkedIn
+- key: github
+  label: GitHub
+- key: email
+  label: Email

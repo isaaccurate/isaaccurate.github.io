@@ -1,0 +1,51 @@
+# Quarter assignments supplied by the site owner.
+# Course titles follow the official course catalog.
+# Sort suffixes: Winter 1, Spring 2, Summer 3, Autumn 4.
+quarters:
+  - title: Autumn 2026
+    sort_key: "2026-4"
+    courses:
+      - code: CSE 447
+        title: Natural Language Processing
+      - code: CSE 421
+        title: Introduction to Algorithms
+      - code: CLAS 101
+        title: Latin and Greek in Current Use
+      - code: MATH 208
+        title: Matrix Algebra with Applications
+  - title: Spring 2026
+    sort_key: "2026-2"
+    courses:
+      - code: ARCH 151
+        title: Appreciation of Architecture II
+      - code: CSE 312
+        title: Foundations of Computing II
+      - code: CSE 332
+        title: Data Structures and Parallelism
+      - code: ESS 101
+        title: Introduction to Geology and Societal Impacts
+  - title: Winter 2026
+    sort_key: "2026-1"
+    courses:
+      - code: CSE 311
+        title: Foundations of Computing I
+      - code: CSE 351
+        title: The Hardware/Software Interface
+      - code: CSE 391
+        title: System and Software Tools
+      - code: CSE 492 J
+        title: Career Seminar
+      - code: PSYCH 210
+        title: The Diversity of Human Sexuality
+  - title: Autumn 2025
+    sort_key: "2025-4"
+    courses:
+      - code: CSE 123
+        title: Introduction to Computer Programming III
+      - code: CSE 190
+        title: Current Topics in Computer Science and Engineering
+      - code: ENGL 182
+        title: "Composition: Multimodal"
+      - code: MATH 126
+        title: Calculus with Analytic Geometry III
+unassigned: []

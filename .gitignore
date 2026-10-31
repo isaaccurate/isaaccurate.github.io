@@ -1,0 +1,16 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+vault/
+.env
+.env.*
+
+# Local visual-review artifacts
+docs/previews/

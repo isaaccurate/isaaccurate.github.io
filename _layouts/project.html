@@ -1,0 +1,4 @@
+---
+layout: default
+---
+<article class="shell page-shell"><a class="back-link" href="{{ '/projects/' | relative_url }}">← All projects</a><header class="page-heading"><h1>{{ page.title | escape }}</h1><p class="lede">{{ page.description | escape }}</p><ul class="chips">{% for tech in page.stack %}<li>{{ tech | escape }}</li>{% endfor %}</ul>{% if page.repository and page.repository != '' %}<a class="button" href="{{ page.repository | escape }}">View source ↗</a>{% endif %}</header><div class="article-grid"><aside><p class="eyebrow">Project context</p><p>{{ page.context | escape }}</p><p class="muted">{{ page.status | escape }}</p><a href="{{ '/contact/' | relative_url }}">Discuss this project →</a></aside><div class="prose">{{ content }}</div></div></article>

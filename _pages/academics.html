@@ -1,0 +1,19 @@
+---
+title: Academics
+permalink: /academics/
+---
+<div class="academic-quarters">
+  {% assign quarters = site.data.coursework.quarters | sort: 'sort_key' | reverse %}
+  {% for quarter in quarters %}
+    <section class="academic-quarter" aria-labelledby="quarter-{{ forloop.index }}">
+      <h2 id="quarter-{{ forloop.index }}">{{ quarter.title | escape }}</h2>
+      {% include course-list.html courses=quarter.courses %}
+    </section>
+  {% endfor %}
+  {% if site.data.coursework.unassigned.size > 0 %}
+    <section class="academic-quarter" aria-labelledby="quarter-unassigned">
+      <h2 id="quarter-unassigned">Quarter to confirm</h2>
+      {% include course-list.html courses=site.data.coursework.unassigned %}
+    </section>
+  {% endif %}
+</div>

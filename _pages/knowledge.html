@@ -1,0 +1,9 @@
+---
+title: Notes
+permalink: /knowledge/
+---
+{% assign writing = site.knowledge | concat: site.posts | sort: 'date' | reverse %}
+{% if writing.size > 0 %}
+<div class="writing-tools" data-note-tools hidden><label for="note-search">Find a note</label><input id="note-search" type="search" placeholder="Search titles, topics, or tags…"><label for="note-tag">Topic</label><select id="note-tag"><option value="">All topics</option></select><p id="note-count" role="status" aria-live="polite"></p></div>
+<div class="note-list" data-notes>{% for note in writing %}<article class="note-row" data-tags="{{ note.tags | join: '|' | escape }}" data-search="{{ note.title | escape }} {{ note.description | escape }} {{ note.categories | join: ' ' | escape }} {{ note.tags | join: ' ' | escape }}"><div><p class="eyebrow">{{ note.kind | default: 'Technical note' | escape }} · {{ note.date | date: '%b %Y' }}</p><h2><a href="{{ note.url | relative_url }}">{{ note.title | escape }} ↗</a></h2><p>{{ note.description | escape }}</p><ul class="chips">{% for tag in note.tags %}<li>{{ tag | escape }}</li>{% endfor %}</ul></div></article>{% endfor %}</div><p data-no-results hidden>No notes match. Try a broader search or select all topics.</p>
+{% endif %}

@@ -1,0 +1,5 @@
+<ul class="course-list">
+  {% for course in include.courses %}
+    <li><span class="course-code">{{ course.code | default: '—' | escape }}</span><span class="course-title">{{ course.title | escape }}</span></li>
+  {% endfor %}
+</ul>

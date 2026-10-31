@@ -1,0 +1,3 @@
+# These directories are relative to the external vault, never the site repository.
+notes_dir: Publish
+assets_dir: PublishAssets

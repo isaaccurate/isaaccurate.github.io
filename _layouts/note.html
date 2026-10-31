@@ -1,0 +1,4 @@
+---
+layout: default
+---
+<article class="shell page-shell narrow"><a class="back-link" href="{{ '/knowledge/' | relative_url }}">← Notes</a><header class="page-heading"><p class="eyebrow">{{ page.kind | default: 'Technical note' | escape }}{% if page.date %} · {{ page.date | date: '%b %-d, %Y' }}{% endif %}</p><h1>{{ page.title | escape }}</h1><p class="lede">{{ page.description | escape }}</p><ul class="chips">{% for tag in page.tags %}<li><a href="{{ '/knowledge/' | relative_url }}?tag={{ tag | url_encode }}">{{ tag | escape }}</a></li>{% endfor %}</ul></header><div class="prose">{{ content }}</div></article>

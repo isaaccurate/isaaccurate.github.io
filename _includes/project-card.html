@@ -1,0 +1,11 @@
+<article class="project-card">
+  <div class="project-art art-{{ include.project.visual }}" aria-hidden="true"><span class="art-label">{{ include.project.visual_label }}</span><div class="art-flow">{{ include.project.flow }}</div><span class="art-index">0{{ include.project.order }} / SELECTED WORK</span></div>
+  <div class="project-copy">
+    <p class="eyebrow">{{ include.project.category | escape }}</p>
+    {% assign heading = include.heading | default: 'h3' %}
+    {% assign repository = include.project.repository | default: '' | strip %}
+    <{{ heading }}>{% if repository != '' %}<a href="{{ repository | escape }}">{{ include.project.title | escape }} <span aria-hidden="true">↗</span></a>{% else %}<span class="project-title-label">{{ include.project.title | escape }} <span aria-hidden="true">↗</span></span>{% endif %}</{{ heading }}>
+    <p>{{ include.project.description | escape }}</p>
+    <ul class="chips" aria-label="Technologies">{% for tech in include.project.stack %}<li>{{ tech | escape }}</li>{% endfor %}</ul>
+  </div>
+</article>
