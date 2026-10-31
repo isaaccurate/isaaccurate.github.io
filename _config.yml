@@ -1,8 +1,8 @@
-title: Your Name
-first_name: Your
-last_name: Name
+title: Isaac Leng
+first_name: Isaac
+last_name: Leng
 description: Software engineering, ML systems, and natural language processing. Projects and technical notes.
-url: "" # Set to https://YOUR_USERNAME.github.io before deploying
+url: "https://isaaccurate.github.io"
 baseurl: "" # Empty for USERNAME.github.io; /REPOSITORY for a project site
 lang: en
 timezone: America/Los_Angeles
