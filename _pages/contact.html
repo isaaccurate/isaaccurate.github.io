@@ -5,11 +5,6 @@ permalink: /contact/
 <ul class="contact-list">
   {% for platform in site.data.socials %}
     {% assign value = site.data.profile[platform.key] %}
-    <li>{% if value and value != '' %}{% if platform.key == 'email' %}<a href="mailto:{{ value | escape }}">{{ value | escape }}</a>{% else %}<a href="{{ value | escape }}">{{ platform.label }}</a>{% endif %}{% else %}{{ platform.label }}: <span class="muted">coming soon</span>{% endif %}</li>
+    <li>{% if value and value != '' %}{% if platform.key == 'email' %}<a href="mailto:{{ value | escape }}">{{ value | replace: '@', ' (at) ' | replace: '.', ' ' | escape }}</a>{% else %}<a href="{{ value | escape }}">{{ platform.label }}</a>{% endif %}{% else %}{{ platform.label }}: <span class="muted">coming soon</span>{% endif %}</li>
   {% endfor %}
-  {% if site.data.profile.resume and site.data.profile.resume != '' %}
-    {% assign resume_start = site.data.profile.resume | slice: 0 %}
-    {% if resume_start == '/' %}{% assign resume_url = site.data.profile.resume | relative_url %}{% else %}{% assign resume_url = site.data.profile.resume %}{% endif %}
-    <li><a href="{{ resume_url | escape }}">Resume</a></li>
-  {% endif %}
 </ul>

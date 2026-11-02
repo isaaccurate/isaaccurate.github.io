@@ -1,5 +1,5 @@
 <article class="project-card">
-  <div class="project-art art-{{ include.project.visual }}" aria-hidden="true"><span class="art-label">{{ include.project.visual_label }}</span><div class="art-flow">{{ include.project.flow }}</div><span class="art-index">0{{ include.project.order }} / SELECTED WORK</span></div>
+  <div class="project-art art-{{ include.project.visual }}" aria-hidden="true"><span class="art-label">{{ include.project.visual_label }}</span><div class="art-flow">{{ include.project.flow }}</div></div>
   <div class="project-copy">
     <p class="eyebrow">{{ include.project.category | escape }}</p>
     {% assign heading = include.heading | default: 'h3' %}

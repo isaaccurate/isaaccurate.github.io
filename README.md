@@ -24,6 +24,8 @@ Start the site with `./scripts/dev.sh`, then open [localhost:4000](http://localh
 
 Content starters are in `templates/`. For exporting selected vault notes, see [Obsidian workflow](docs/OBSIDIAN.md).
 
+For equations, set `math: true` in a note’s front matter. Use `$$...$$` inline, or put the `$$` delimiters on separate lines with blank lines around the block for display equations. MathJax loads only on those pages.
+
 ## Deployment
 
 Set `url` and `baseurl` in `_config.yml`. Use an empty `baseurl` for a root site, or `/repository-name` for a project site. In the GitHub repository’s **Settings → Pages**, select **GitHub Actions**. Pushing to `main` runs the build, checks, and deployment in `.github/workflows/pages.yml`.

@@ -1,7 +1,6 @@
 title: Isaac Leng
 first_name: Isaac
 last_name: Leng
-description: Software engineering, ML systems, and natural language processing. Projects and technical notes.
 url: "https://isaaccurate.github.io"
 baseurl: "" # Empty for USERNAME.github.io; /REPOSITORY for a project site
 lang: en
@@ -42,7 +41,7 @@ collections:
     permalink: /knowledge/:name/
 defaults:
   - scope: {path: ""}
-    values: {layout: page, image: /assets/img/social.svg}
+    values: {layout: page}
   - scope: {path: "", type: projects}
     values: {layout: null}
   - scope: {path: "", type: knowledge}

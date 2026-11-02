@@ -1,15 +1,4 @@
 name: Isaac Leng
-initials: IL
-headline: Software, with a clear purpose.
-school: University of Washington, Seattle
-degree: B.S. Computer Science
-graduation: Spring 2028
-availability: Seeking Summer 2027 internships
-focus: [Software engineering, ML systems, Natural language processing]
-email: "isaacl51506@gmail.com"
-github: "https://github.com/isaaccurate"
-linkedin: "https://www.linkedin.com/in/isaac-leng/"
-resume: "" # /assets/resume.pdf after adding the actual file
-location: Seattle, WA
-portrait: "" # Add your photo, then set /assets/img/portrait.jpg
-portrait_alt: "" # Optional; defaults to "Portrait of [name]"
+email: ileng@cs.washington.edu
+github: https://github.com/isaaccurate
+linkedin: https://www.linkedin.com/in/isaac-leng/

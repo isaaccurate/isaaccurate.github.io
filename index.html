@@ -2,4 +2,15 @@
 layout: default
 title: About
 ---
-<div class="shell page-shell"></div>
+<article class="shell page-shell about-intro">
+  <div class="prose">
+    <p>Hey there! I’m Isaac, currently a junior at the University of Washington majoring in computer science. I’m particularly interested in NLP and ML, specifically how language models understand human intent, social context, and the meanings we leave unspoken. I also enjoy learning about new algorithms, keeping up with advances in algorithmic efficiency and computational limits, and building practical software tools that make everyday tasks easier. I care about creating a positive impact through engineering. Feel free to check out my <a href="{{ '/projects/' | relative_url }}">projects</a>!</p>
+    <p>This site is still under construction, but most things are up and running :)</p>
+  </div>
+  <figure class="about-profile">
+    <div class="about-portrait">
+      <img src="{{ '/assets/img/isaac-leng.jpg' | relative_url }}" alt="Portrait of Isaac Leng" width="2316" height="2994">
+    </div>
+    <figcaption class="portrait-contact"><a href="mailto:{{ site.data.profile.email | escape }}">{{ site.data.profile.email | replace: '@', ' (at) ' | replace: '.', ' ' | escape }}</a></figcaption>
+  </figure>
+</article>
